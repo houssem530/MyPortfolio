@@ -136,9 +136,10 @@
 
 .cloud {
     position: absolute;
-    opacity: 0.1;
-    color: #60a5fa;
-    font-size: 24px;
+    opacity: 0.4;
+    color: #94a3b8;
+    font-size: 32px;
+    filter: drop-shadow(0 0 8px rgba(148, 163, 184, 0.3));
 }
 
 .cloud-1 {
@@ -183,6 +184,18 @@
     animation: float-clouds 32s infinite linear;
 }
 
+.cloud-8 {
+    top: 15%;
+    left: 80%;
+    animation: float-clouds-reverse 45s infinite linear;
+}
+
+.cloud-9 {
+    top: 55%;
+    left: 70%;
+    animation: float-clouds-slow 38s infinite linear;
+}
+
 /* Lightning Effect */
 .lightning-container {
     position: fixed;
@@ -191,32 +204,46 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 2;
+    z-index: 3;
     overflow: hidden;
 }
 
-.lightning {
+.thunderbolt {
     position: absolute;
-    width: 2px;
+    width: 4px;
     height: 100vh;
-    background: linear-gradient(to bottom, #60a5fa, #3b82f6, #1d4ed8);
+    background: linear-gradient(to bottom, 
+        #e0e7ff 0%, 
+        #c7d2fe 20%, 
+        #a5b4fc 40%, 
+        #8b5cf6 60%, 
+        #7c3aed 80%, 
+        #6d28d9 100%);
     opacity: 0;
-    left: 50%;
+    left: 20%;
     transform: translateX(-50%);
-    animation: lightning 4s infinite;
-    animation-delay: 2s;
+    animation: thunderbolt-strike 3s infinite;
+    animation-delay: 1s;
+    border-radius: 2px;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
 }
 
-.lightning-flash {
+.thunderbolt-2 {
+    left: 80%;
+    animation-delay: 2.5s;
+    width: 3px;
+}
+
+.thunderbolt-flash {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(96, 165, 250, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
     opacity: 0;
-    animation: lightning-flash 4s infinite;
-    animation-delay: 2s;
+    animation: thunderbolt-flash 3s infinite;
+    animation-delay: 1s;
 }
 
 /* Smooth Scrolling */
