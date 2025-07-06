@@ -87,7 +87,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-slate-900 via-purple-900/10 to-blue-900/10">
+    <section id="skills" className="py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-purple-900/40">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -100,7 +100,7 @@ const Skills = () => {
                 Skills & Competencies
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
               A comprehensive overview of my technical skills and professional competencies
             </p>
           </div>
