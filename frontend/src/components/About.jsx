@@ -32,7 +32,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-slate-900 via-blue-900/20 to-purple-900/20">
+    <section id="about" className="py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-purple-900/40">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -54,18 +54,18 @@ const About = () => {
           {/* Content Grid */}
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Story */}
-            <div className="space-y-6">
+            <div className="space-y-6 bg-slate-800/60 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50">
               <div className="space-y-4">
                 <h3 className="text-2xl font-semibold text-blue-200 flex items-center gap-2">
                   <TrendingUp className="w-6 h-6 text-blue-400" />
                   My Journey
                 </h3>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-200 leading-relaxed">
                   After a decade of successfully managing teams and delivering exceptional customer experiences, 
                   I discovered my passion for cloud technology. This unique background gives me a deep understanding 
                   of both the technical and human aspects of digital transformation.
                 </p>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-200 leading-relaxed">
                   As a junior cloud architect, I'm focused on mastering all areas of AWS solutions architecture. 
                   My goal is to become a versatile solution architect who can design systems that are not only 
                   technically sound but also align perfectly with business objectives.
@@ -77,7 +77,7 @@ const About = () => {
                 <h4 className="text-lg font-medium text-blue-200">Core Competencies</h4>
                 <div className="flex flex-wrap gap-2">
                   {['AWS Solutions Architecture', 'Team Leadership', 'Customer Relations', 'Python', 'Linux', 'Problem Solving', 'Strategic Planning'].map((skill) => (
-                    <Badge key={skill} variant="secondary" className="bg-blue-900/30 text-blue-200 border-blue-700/50">
+                    <Badge key={skill} variant="secondary" className="bg-blue-900/40 text-blue-200 border-blue-700/50">
                       {skill}
                     </Badge>
                   ))}
@@ -88,13 +88,13 @@ const About = () => {
             {/* Right Column - Highlights */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {highlights.map((highlight, index) => (
-                <Card key={index} className="bg-slate-800/50 border-slate-700/50 backdrop-blur-sm transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                <Card key={index} className="bg-slate-800/60 border-slate-700/50 backdrop-blur-sm transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
                   <CardContent className="p-6">
                     <div className={`${highlight.color} mb-4`}>
                       <highlight.icon className="w-8 h-8" />
                     </div>
                     <h4 className="text-lg font-semibold text-white mb-2">{highlight.title}</h4>
-                    <p className="text-gray-300 text-sm leading-relaxed">{highlight.description}</p>
+                    <p className="text-gray-200 text-sm leading-relaxed">{highlight.description}</p>
                   </CardContent>
                 </Card>
               ))}
