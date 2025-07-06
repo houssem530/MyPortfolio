@@ -64,7 +64,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-slate-900 via-blue-900/20 to-purple-900/20">
+    <section id="contact" className="py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-purple-900/40">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -77,7 +77,7 @@ const Contact = () => {
                 Let's Connect
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
               Ready to discuss cloud solutions or explore opportunities? I'd love to hear from you!
             </p>
           </div>
