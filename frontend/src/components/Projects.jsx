@@ -36,7 +36,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-br from-slate-900 via-blue-900/10 to-purple-900/10">
+    <section id="projects" className="py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-purple-900/40">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -49,7 +49,7 @@ const Projects = () => {
                 Cloud Solutions Portfolio
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
               Explore my hands-on AWS projects showcasing scalable architecture patterns and best practices
             </p>
           </div>
