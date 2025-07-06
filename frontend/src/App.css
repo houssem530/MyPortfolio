@@ -225,42 +225,60 @@
     overflow: hidden;
 }
 
-.thunderbolt {
-    position: absolute;
-    width: 4px;
-    height: 100vh;
-    background: linear-gradient(to bottom, 
-        #e0e7ff 0%, 
-        #c7d2fe 20%, 
-        #a5b4fc 40%, 
-        #8b5cf6 60%, 
-        #7c3aed 80%, 
-        #6d28d9 100%);
-    opacity: 0;
-    left: 20%;
-    transform: translateX(-50%);
-    animation: thunderbolt-strike 3s infinite;
-    animation-delay: 1s;
-    border-radius: 2px;
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
-}
-
-.thunderbolt-2 {
-    left: 80%;
-    animation-delay: 2.5s;
-    width: 3px;
-}
-
-.thunderbolt-flash {
+.zigzag-thunderbolt {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 200px;
+    background: linear-gradient(to bottom, 
+        #f0f9ff 0%, 
+        #bae6fd 20%, 
+        #7dd3fc 40%, 
+        #38bdf8 60%, 
+        #0ea5e9 80%, 
+        #0284c7 100%);
     opacity: 0;
-    animation: thunderbolt-flash 3s infinite;
-    animation-delay: 1s;
+    filter: drop-shadow(0 0 15px #38bdf8) drop-shadow(0 0 30px #0ea5e9);
+    clip-path: polygon(
+        40% 0%, 
+        60% 0%, 
+        70% 15%, 
+        45% 15%, 
+        55% 30%, 
+        35% 30%, 
+        50% 45%, 
+        25% 45%, 
+        40% 60%, 
+        65% 60%, 
+        50% 75%, 
+        70% 75%, 
+        55% 90%, 
+        45% 90%, 
+        50% 100%
+    );
+    transition: opacity 0.3s ease-out, transform 0.1s ease-out;
+}
+
+.zigzag-thunderbolt.visible {
+    opacity: 0.8;
+}
+
+.thunderbolt-glow {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100vh;
+    background: radial-gradient(ellipse 100px 100vh at center, rgba(56, 189, 248, 0.2) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.thunderbolt-glow.visible {
+    opacity: 1;
 }
 
 /* Smooth Scrolling */
