@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Cloud } from 'lucide-react';
 
 const BackgroundAnimations = () => {
-  const [showLightning, setShowLightning] = useState(false);
+  const [showThunderbolt, setShowThunderbolt] = useState(false);
 
   useEffect(() => {
     let timeoutId;
@@ -13,11 +13,11 @@ const BackgroundAnimations = () => {
         clearTimeout(timeoutId);
       }
       
-      // Set new timeout for lightning effect
+      // Set new timeout for thunderbolt effect
       timeoutId = setTimeout(() => {
-        setShowLightning(true);
-        setTimeout(() => setShowLightning(false), 1000);
-      }, 300);
+        setShowThunderbolt(true);
+        setTimeout(() => setShowThunderbolt(false), 2000);
+      }, 200);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -35,20 +35,23 @@ const BackgroundAnimations = () => {
     <>
       {/* Floating Clouds */}
       <div className="floating-clouds">
-        <Cloud className="cloud cloud-1" size={32} />
-        <Cloud className="cloud cloud-2" size={28} />
-        <Cloud className="cloud cloud-3" size={36} />
-        <Cloud className="cloud cloud-4" size={24} />
-        <Cloud className="cloud cloud-5" size={30} />
-        <Cloud className="cloud cloud-6" size={26} />
-        <Cloud className="cloud cloud-7" size={34} />
+        <Cloud className="cloud cloud-1" size={36} />
+        <Cloud className="cloud cloud-2" size={32} />
+        <Cloud className="cloud cloud-3" size={40} />
+        <Cloud className="cloud cloud-4" size={28} />
+        <Cloud className="cloud cloud-5" size={34} />
+        <Cloud className="cloud cloud-6" size={30} />
+        <Cloud className="cloud cloud-7" size={38} />
+        <Cloud className="cloud cloud-8" size={26} />
+        <Cloud className="cloud cloud-9" size={35} />
       </div>
 
-      {/* Lightning Effect */}
-      {showLightning && (
+      {/* Thunderbolt Effect */}
+      {showThunderbolt && (
         <div className="lightning-container">
-          <div className="lightning-flash"></div>
-          <div className="lightning"></div>
+          <div className="thunderbolt-flash"></div>
+          <div className="thunderbolt"></div>
+          <div className="thunderbolt thunderbolt-2"></div>
         </div>
       )}
     </>
